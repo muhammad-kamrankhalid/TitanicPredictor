@@ -45,7 +45,7 @@ with st.form("titanic_form"):
     with col1:
         st.title("🚢 Titanic Survival Predictor")
         # st.write("Enter passenger details to predict survival probability.")
-        pclass = st.selectbox("Passenger Class (Pclass)", [1, 2, 3])
+        pclass = st.selectbox("Passenger Class (Pclass) Ticket class (A or B or C)", [1, 2, 3])
         age = st.number_input("Age", min_value=0.0, max_value=100.0, value=25.0)
         sibsp = st.number_input("Number of Siblings/Spouses Aboard (SibSp)", min_value=0, step=1)
         parch = st.number_input("Number of Parents/Children Aboard (Parch)", min_value=0, step=1)
@@ -53,7 +53,7 @@ with st.form("titanic_form"):
     with col2:
         fare = st.number_input("Fare Paid", min_value=0.0)
         gender = st.radio("Gender", ["Male", "Female"])
-        embarked = st.selectbox("Port of Embarkation", ["Q", "S", "C"])
+        embarked = st.selectbox("Port of Embarkation (Queesntown, Southampton, Cherbourg)", ["Q", "S", "C"])
 
     submitted = st.form_submit_button("Predict")
 
